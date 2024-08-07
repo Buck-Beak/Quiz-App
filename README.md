@@ -43,7 +43,7 @@ npm install -g json-server
 4. Start JSON Server:
 
 ```sh
-json-server --watch public/notes.json --port 8000
+json-server --watch public/users.json --port 8001
 ```
 
 5. To use the Gemini API in your own application, you need to install the GoogleGenerativeAI package for Node.js

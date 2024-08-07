@@ -1,7 +1,7 @@
-# Tech Haven
+# Trivia Nation
 
-Tech Haven is a React quiz application that generates questions dynamically using Google Generative API.allows users to select a topic and answer multiple-choice
-questions on that topic.
+Trivia Nation is a React quiz application that generates questions dynamically using Google Generative API.allows users to select a topic and answer multiple
+choice questions on that topic.
 
 ## Table of Contents
 

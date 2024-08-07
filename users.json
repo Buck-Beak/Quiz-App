@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Nanda",
+      "username": "frostycupcake",
+      "pwd": "Romione"
+    },
+    {
+      "id": "f567",
+      "name": "Akash",
+      "pwd": "bruhhh",
+      "username": "frostycake"
+    },
+    {
+      "id": "2555",
+      "name": "Ujala",
+      "pwd": "swiftandshine",
+      "username": "ujalaujala"
+    },
+    {
+      "id": "9f85",
+      "name": "bla bla",
+      "pwd": "hii",
+      "username": "blaaa"
+    }
+  ]
+}

@@ -1,70 +1,105 @@
-# Getting Started with Create React App
+# Tech Haven
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Tech Haven is a React quiz application that generates questions dynamically using Google Generative API.allows users to select a topic and answer multiple-choice
+questions on that topic.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Installation](#installation)
+- [Usage](#usage)
+- [Components](#components)
+  - [Navbar](#navbar)
+  - [Signup](#signup)
+  - [Login](#login)
+  - [TopicList](#topiclist)
+  - [TopicDetails](#topicdetails)
+  - [Home](#home)
+  - [QuestionList](#questionlist)
+  - [FetchQuestions](#fetchquestions)
+  - [UseFetch](#usefetch)
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```sh
+git clone <repository_url>
+cd note-maker
+```
 
-### `npm test`
+2. Install the dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install
+```
 
-### `npm run build`
+3. Install JSON Server globally:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm install -g json-server
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. Start JSON Server:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```sh
+json-server --watch public/notes.json --port 8000
+```
 
-### `npm run eject`
+5. To use the Gemini API in your own application, you need to install the GoogleGenerativeAI package for Node.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```sh
+npm install @google/generative-ai
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+6. Start the React application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```sh
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Usage
 
-## Learn More
+1. Open the app in your browser.
+2. Register or log in to your account.
+3. Select a topic from the home screen.
+4. Answer the questions generated for the selected topic and hit submit.
+5. Displays the correct answer after each submit.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Components
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Navbar
 
-### Code Splitting
+Displays the navigation bar which contains app name and login link.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Signup
 
-### Analyzing the Bundle Size
+Handles user registration by taking the user's name, username, and password and storing them in the user database.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Login
 
-### Making a Progressive Web App
+Handles user authentication by verifying the entered username and password against the user database.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### TopicList
 
-### Advanced Configuration
+Contains the list of topics that users can choose from which on clicked will redirect to a new page that displays questions.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### TopicDetails
 
-### Deployment
+Receives the prompt to generate questions from TopicList and passes it to the QuestionList component for question generation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Home
 
-### `npm run build` fails to minify
+Serves as the landing page, displaying the TopicList component.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### QuestionList
+
+Fetches and displays questions based on the selected topic using the provided prompt.
+
+### FetchQuestions
+
+Generates questions based on the prompt provided in TopicList component using Gemini API key.
+
+### UseFetch
+
+This custom hook fetches the user data from the given url for login functionality.
+

@@ -17,6 +17,7 @@ choice questions on that topic.
   - [QuestionList](#questionlist)
   - [FetchQuestions](#fetchquestions)
   - [UseFetch](#usefetch)
+  - [.env](#env)
 
 ## Installation
 
@@ -102,4 +103,8 @@ Generates questions based on the prompt provided in TopicList component using Ge
 ### UseFetch
 
 This custom hook fetches the user data from the given url for login functionality.
+
+### .env
+
+The .env file contains the api key required to generate questions which is used in FetchQuestions component.
 

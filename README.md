@@ -1,6 +1,6 @@
 # Trivia Nation
 
-Trivia Nation is a React quiz application that generates questions dynamically using Google Generative API.allows users to select a topic and answer multiple
+Trivia Nation is a React quiz application that generates questions dynamically using Google Generative API. Allows users to select a topic and answer multiple
 choice questions on that topic.
 
 ## Table of Contents
@@ -24,7 +24,7 @@ choice questions on that topic.
 
 ```sh
 git clone <repository_url>
-cd note-maker
+cd quiz-app
 ```
 
 2. Install the dependencies:
